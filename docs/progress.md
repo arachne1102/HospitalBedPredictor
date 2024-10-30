@@ -8,40 +8,7 @@
 - **데이터 수집 로깅**:  
   데이터 수집 과정에서 발생하는 이벤트와 오류를 로깅하여 문제 발생 시 빠르게 대응할 수 있도록 준비했습니다.
 
-### data-collection-preprocessing 작업 완료
-- **데이터 로드**:  
-  원본 CSV 파일을 로드하는 데이터 로딩 스크립트를 작성했습니다.
-- **결측치 처리**:  
-  수치형 변수의 결측치를 `0`으로, 플래그 변수의 결측치를 `'N'`으로 대체했습니다.
-- **플래그 변환**:  
-  `hvctayn`, `hvmriayn`, `hvventisoayn` 컬럼을 `'Y'`와 `'N'`으로 변환했습니다.
-- **이상치 제거**:  
-  수치형 변수에서 IQR(Interquartile Range)을 기준으로 이상치를 제거했습니다.
-- **데이터 타입 변환**:  
-  `hpid`, `duty_name`, `duty_addr` 컬럼을 문자열 타입으로 변환했습니다.
-- **전처리 완료 및 저장**:  
-  전처리된 데이터를 `processed_hospital_data.csv` 경로에 저장했습니다.
 
----
-
-## 특성 엔지니어링 (Feature Engineering) 완료
-
-- **시간대 분류**:  
-  아침(06:00 ~ 12:00), 낮(12:00 ~ 18:00), 저녁(18:00 ~ 24:00), 심야(00:00 ~ 06:00)로 시간대를 분류했습니다.
-  
-- **공휴일 및 주말 처리**:  
-  공휴일 및 주말 여부를 구분하여 분석에 활용했습니다.
-  
-- **병상 가용률 계산**:  
-  응급실(`er_bed_utilization`)과 중환자실(`icu_bed_utilization`)의 가용률을 계산했습니다.
-
-- **One-Hot Encoding 적용**:  
-  요일(`day_of_week`)과 시간대(`time_of_day`)를 One-Hot Encoding으로 변환했습니다.
-
-- **Feature Engineering 완료 및 저장**:  
-  처리된 데이터는 `feature_engineered_hospital_data.csv`에 저장되었습니다.
-
----
 
 ## 환경 설정 안내
 
