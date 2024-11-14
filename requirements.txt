@@ -1,22 +1,22 @@
 # 데이터 수집 단계에 필요한 패키지
-mysql-connector-python==9.1.0
-sshtunnel==0.4.0
-python-dotenv==1.0.1
+mysql-connector-python
+sshtunnel
+python-dotenv
 
 # 데이터 처리 및 분석
-pandas==2.2.3
-numpy==2.0.2
+pandas
+numpy
 
 # 머신러닝 및 딥러닝
-tensorflow==2.18.0
+tensorflow
 
 # 시계열 분석 및 예측
-scikit-learn==1.5.2
-statsmodels==0.14.4
-prophet==1.1.6
+scikit-learn
+statsmodels
+prophet
 
 # 데이터 시각화
-seaborn==0.13.2
+seaborn
 
 # 하이퍼파라미터 최적화
-optuna==4.0.0
+optuna

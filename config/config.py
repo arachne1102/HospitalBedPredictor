@@ -48,6 +48,7 @@ class Config:
     LSTM_PREDICTIONS_PATH = get_env_variable("LSTM_PREDICTIONS_PATH")
     SARIMA_PREDICTIONS_PATH = get_env_variable("SARIMA_PREDICTIONS_PATH")
     PROPHET_PREDICTIONS_PATH = get_env_variable("PROPHET_PREDICTIONS_PATH")
+    ENSEMBLE_PREDICTIONS_PATH = get_env_variable("ENSEMBLE_PREDICTIONS_PATH")
 
 
 config = Config()
