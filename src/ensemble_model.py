@@ -51,6 +51,9 @@ def merge_predictions(sarima_df, prophet_df, lstm_df):
     # 단순 평균 앙상블: 공통 시간대에 해당하는 예측값의 평균을 ensemble_pred 열에 계산
     merged_df['ensemble_pred'] = merged_df[['sarima_pred', 'prophet_pred', 'lstm_pred']].mean(axis=1)
     
+    # 소수점 6자리에서 반올림
+    merged_df['ensemble_pred'] = merged_df['ensemble_pred'].round(6)
+    
     logging.info(f"공통 시간대 필터링 완료: {len(merged_df)}개의 예측 데이터가 병합되었습니다.")
     
     return merged_df
